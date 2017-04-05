@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset='utf-8'>
+    <title>Wobble Window - jQuery Example 6</title>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+    <script src='js/jquery.wobblewindow.min.js'></script>
+
+    <style type='text/css'>
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, font, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            background: transparent;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+            background-color: #CCC;
+        }
+        
+        .clear {
+            clear: both;
+            height: 0;
+            font-size: 0;
+            line-height: 0;
+        }
+
+        #window1 {
+            width:180px; 
+            height:180px; 
+            left:30px; 
+            top:30px; 
+            position:absolute;
+            padding: 15px 15px 15px 15px;
+            pointer-events: none;
+        }
+
+        #window2 {
+            width:180px; 
+            height:180px; 
+            left:30px; 
+            top:30px; 
+            position:absolute;
+            padding: 15px 15px 15px 15px;
+            pointer-events: none;
+        }
+
+        #window3 {
+            width:180px; 
+            height:180px; 
+            left:30px; 
+            top:30px; 
+            position:absolute;
+            padding: 15px 15px 15px 15px;
+            pointer-events: none;
+        }
+
+        #window4 {
+            width:180px; 
+            height:180px; 
+            left:30px; 
+            top:30px; 
+            position:absolute;
+            padding: 15px 15px 15px 15px;
+            pointer-events: none;
+        }
+
+    </style>
+
+    <script>
+
+        $( document ).ready( function() {
+
+            //------------------------------------------------------------------------
+
+            //Settings - params for WobbleWindow
+            var settings1 = {
+
+                wobbleFactor: 0.99,
+                wobbleSpeed: 0.05,
+                moveSpeed: 3,
+                lineColor: '',
+                bodyColor: '#EEE',
+                movementLeft: true,
+                movementRight: true,
+                movementTop: true,
+                movementBottom: true
+
+            };
+
+            var settings2 = {
+
+                wobbleFactor: 0.99,
+                wobbleSpeed: 0.05,
+                moveSpeed: 3,
+                lineColor: '#222',
+                bodyColor: '#EEE',
+                movementLeft: true,
+                movementRight: true,
+                movementTop: true,
+                movementBottom: true
+
+            };
+
+            var settings3 = {
+
+                wobbleFactor: 0.99,
+                wobbleSpeed: 0.05,
+                moveSpeed: 3,
+                lineColor: '#222',
+                bodyColor: '#EEE',
+                movementLeft: true,
+                movementRight: true,
+                movementTop: true,
+                movementBottom: true
+
+            };
+
+            var settings4 = {
+
+                wobbleFactor: 0.99,
+                wobbleSpeed: 0.05,
+                moveSpeed: 3,
+                lineColor: '',
+                bodyColor: '#EEE',
+                movementLeft: true,
+                movementRight: true,
+                movementTop: true,
+                movementBottom: true
+
+            };
+
+            //------------------------------------------------------------------------
+
+            //standalone
+
+            //init
+            
+            var wobbleWindow1 = new WobbleWindow( document.getElementById( 'window1' ), settings1 );
+            var wobbleWindow2 = new WobbleWindow( document.getElementById( 'window2' ), settings2 );
+            var wobbleWindow3 = new WobbleWindow( document.getElementById( 'window3' ), settings3 );
+            var wobbleWindow4 = new WobbleWindow( document.getElementById( 'window4' ), settings4 );
+
+            //------------------------------------------------------------------------
+
+            //jQuery
+
+            //init
+            
+            // $( '#window1' ).wobbleWindow( settings1 );
+            // $( '#window2' ).wobbleWindow( settings2 );
+            // $( '#window3' ).wobbleWindow( settings3 );
+            // $( '#window4' ).wobbleWindow( settings4 );
+            
+            //------------------------------------------------------------------------
+
+		} );
+        
+    </script>
+
+</head>
+
+<body>
+
+    <div id='holder1' style='left:0px; top:0px; width:240px; height:240px; position:absolute; background-color: #222'>
+    
+        <div id='window1'>
+            <strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing elit. Fusce ac elementum tortor, eget efficitur quam. Quisque eu erat dui. Etiam ut.
+        </div>
+
+    </div>
+    <div id='holder2' style='left:240px; top:0px; width:240px; height:240px; position:absolute; background-color: #EEE'>
+    
+        <div id='window2'>
+            <strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing elit. Fusce ac elementum tortor, eget efficitur quam. Quisque eu erat dui. Etiam ut.
+        </div>
+
+    </div>
+    <div id='holder3' style='left:0px; top:240px; width:240px; height:240px; position:absolute; background-color: #EEE'>
+    
+        <div id='window3'>
+            <strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing elit. Fusce ac elementum tortor, eget efficitur quam. Quisque eu erat dui. Etiam ut.
+        </div>
+
+    </div>
+    <div id='holder4' style='left:240px; top:240px; width:240px; height:240px; position:absolute; background-color: #222'>
+    
+        <div id='window4'>
+            <strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing elit. Fusce ac elementum tortor, eget efficitur quam. Quisque eu erat dui. Etiam ut.
+        </div>
+
+    </div>
+
+</body>
