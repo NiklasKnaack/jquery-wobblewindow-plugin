@@ -18,6 +18,14 @@ Wobble Window is a fancy jQuery plugin that helps you create a cool, interactive
 * <http://nkunited.de/jquery/plugins/wobblewindow/example5.html/>
 * <http://nkunited.de/jquery/plugins/wobblewindow/example6.html/>
 
+## Installation
+
+### install it through [npm](https://www.npmjs.com/):
+
+```
+npm install jquery-wobblewindow-plugin
+```
+
 ## Example Usage
 
 ### HTML
@@ -97,7 +105,7 @@ var wobbleWindow = new WobbleWindow( document.getElementById( 'window' ), settin
 
 ## Notes
 
-* Makes sure it never causes duplicate IDs in your DOM
+* Make sure you never use duplicated IDs in your DOM
 
 ## License
 
