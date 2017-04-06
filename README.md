@@ -7,7 +7,7 @@ Wobble Window is a fancy jQuery plugin that helps you create a cool, interactive
 
 ## Demo & Examples
 
-<http://blog.niklasknaack.de/2017/04/wobble-window-jquery-plugin.html/>
+<http://blog.niklasknaack.de/2017/04/wobble-window-jquery-plugin.html>
 
 ### More Examples
 
