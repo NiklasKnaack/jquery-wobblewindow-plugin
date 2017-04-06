@@ -3,11 +3,20 @@
 
 ## Description
 
-This is a lightweight jQuery plugin that applies a wobble effect to your HTML elements backgrounds.
+Wobble Window is a fancy jQuery plugin that helps you create a cool, interactive, configurable, HTML5 canvas based gooey effect when the mouse moves in/out a specified element.
 
 ## Demo & Examples
 
 <http://blog.niklasknaack.de/2017/04/wobble-window-jquery-plugin.html/>
+
+### More Examples
+
+<http://nkunited.de/jquery/plugins/wobblewindow/example1.html/>
+<http://nkunited.de/jquery/plugins/wobblewindow/example2.html/>
+<http://nkunited.de/jquery/plugins/wobblewindow/example3.html/>
+<http://nkunited.de/jquery/plugins/wobblewindow/example4.html/>
+<http://nkunited.de/jquery/plugins/wobblewindow/example5.html/>
+<http://nkunited.de/jquery/plugins/wobblewindow/example6.html/>
 
 ## Example Usage
 
