@@ -11,12 +11,12 @@ Wobble Window is a fancy jQuery plugin that helps you create a cool, interactive
 
 ### More Examples
 
-* <http://nkunited.de/jquery/plugins/wobblewindow/example1.html/>
-* <http://nkunited.de/jquery/plugins/wobblewindow/example2.html/>
-* <http://nkunited.de/jquery/plugins/wobblewindow/example3.html/>
-* <http://nkunited.de/jquery/plugins/wobblewindow/example4.html/>
-* <http://nkunited.de/jquery/plugins/wobblewindow/example5.html/>
-* <http://nkunited.de/jquery/plugins/wobblewindow/example6.html/>
+* <http://nkunited.de/jquery/plugins/wobblewindow/example1.html>
+* <http://nkunited.de/jquery/plugins/wobblewindow/example2.html>
+* <http://nkunited.de/jquery/plugins/wobblewindow/example3.html>
+* <http://nkunited.de/jquery/plugins/wobblewindow/example4.html>
+* <http://nkunited.de/jquery/plugins/wobblewindow/example5.html>
+* <http://nkunited.de/jquery/plugins/wobblewindow/example6.html>
 
 ## Installation
 

@@ -2,7 +2,7 @@
   "name": "jquery-wobblewindow-plugin",
   "title": "Wobble window jQuery plugin",
   "description": "Wobble Window is a fancy jQuery plugin that helps you create a cool, interactive, configurable, HTML5 canvas based gooey effect when the mouse moves in/out a specified element.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/NiklasKnaack/jquery-wobblewindow-plugin",
   "author": {
     "name": "Niklas Knaack <info@niklasknaack.de>",

@@ -1,6 +1,6 @@
 /*
 Wobble window jQuery plugin
-Version: 1.0.1
+Version: 1.0.2
 
 Written by Niklas Knaack
 
