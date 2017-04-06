@@ -23,7 +23,7 @@ Wobble Window is a fancy jQuery plugin that helps you create a cool, interactive
 install it through [npm](https://www.npmjs.com/):
 
 ```
-npm install jquery-wobblewindow-plugin
+npm i jquery-wobblewindow-plugin
 ```
 
 ## Example Usage
