@@ -111,4 +111,6 @@ var wobbleWindow = new WobbleWindow( document.getElementById( 'window' ), settin
 
 This plugin is available under [the MIT license](http://mths.be/mit).
 
+## Author
+
 _– [Niklas](http://niklasknaack.de/)_
