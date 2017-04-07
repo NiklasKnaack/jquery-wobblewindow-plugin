@@ -51,9 +51,9 @@ THE SOFTWARE.
             windowObject.movementRight = true;
             windowObject.movementTop = true;
             windowObject.movementBottom = true;
+            windowObject.autoResize = true;
             windowObject.debug = false;
-            windowObject.pointHolder = [];
-
+            
         //---
 
         if ( params !== undefined ) {
@@ -92,39 +92,51 @@ THE SOFTWARE.
 
         //---
 
-        function addWindow() {
-
-            var elementWidth = element.offsetWidth;
-            var elementHeight = element.offsetHeight;
-            var elementRect = element.getBoundingClientRect();
-            var elementParentRect = element.parentElement.getBoundingClientRect();
-
-            var width = elementWidth + windowObject.offsetX * 2;
-            var height = elementHeight + windowObject.offsetY * 2;
-
-            var pointDistanceX = width / ( windowObject.numberOfXPoints - 1 );
-            var pointDistanceY = height / ( windowObject.numberOfYPoints + 1 );
-            var radiusMax = Math.ceil( Math.max( pointDistanceX, pointDistanceY ) );
-            //var radiusMax = Math.ceil( Math.max( pointDistanceX, pointDistanceY ) ) * 2;
-            //var radiusMin = Math.floor( Math.min( pointDistanceX, pointDistanceY ) );
+        function init() {
 
             canvas = document.createElement( 'canvas' );
-            canvas.width = elementWidth + radiusMax * 2;
-            canvas.height = elementHeight + radiusMax * 2;
+            canvas.style.position = 'absolute';
+            canvas.style.zIndex = windowObject.depth.toString();
             canvas.addEventListener( 'mousemove', mouseMoveHandler );
             canvas.addEventListener( 'mouseleave', mouseLeaveHandler ); 
-            canvas.style.position = 'absolute';
-            canvas.style.left = ( ( elementRect.left - elementParentRect.left ) - radiusMax ) + 'px';
-            canvas.style.top = ( ( elementRect.top - elementParentRect.top ) - radiusMax ) + 'px';
-            canvas.style.zIndex = windowObject.depth.toString();
 
             element.parentElement.appendChild( canvas );
             element.style.zIndex = ( windowObject.depth + 1 ).toString();
 
             ctx = canvas.getContext( '2d' );
 
+            //---
+
+            addWindow();
+            animloop();
+
+        };
+
+        //---
+
+        function addWindow() {
+
+            windowObject.elementWidth = element.offsetWidth;
+            windowObject.elementHeight = element.offsetHeight;
+            windowObject.elementRect = element.getBoundingClientRect();
+            windowObject.elementParentRect = element.parentElement.getBoundingClientRect();
+
+            var width = windowObject.elementWidth + windowObject.offsetX * 2;
+            var height = windowObject.elementHeight + windowObject.offsetY * 2;
+
+            var pointDistanceX = width / ( windowObject.numberOfXPoints - 1 );
+            var pointDistanceY = height / ( windowObject.numberOfYPoints + 1 );
+            var radius = Math.ceil( Math.max( pointDistanceX, pointDistanceY ) );
+            //var radius = Math.ceil( Math.max( pointDistanceX, pointDistanceY ) ) * 2;
+
+            canvas.width = windowObject.elementWidth + radius * 2;
+            canvas.height = windowObject.elementHeight + radius * 2;
+            canvas.style.left = ( ( windowObject.elementRect.left - windowObject.elementParentRect.left ) - radius ) + 'px';
+            canvas.style.top = ( ( windowObject.elementRect.top - windowObject.elementParentRect.top ) - radius ) + 'px';
+
             windowObject.canvasWidth = canvas.width;
             windowObject.canvasHeight = canvas.height;
+            windowObject.pointHolder = [];
 
             var x = ( windowObject.canvasWidth - width ) / 2;
             var y = ( windowObject.canvasHeight - height ) / 2;
@@ -357,6 +369,12 @@ THE SOFTWARE.
 
             render();
 
+            if ( windowObject.autoResize ) {
+
+                resize();
+
+            }
+
         };
 
         //---
@@ -501,6 +519,19 @@ THE SOFTWARE.
 
         };
 
+        function resize() {
+
+            if ( windowObject.elementWidth !== element.offsetWidth || 
+                 windowObject.elementHeight !== element.offsetHeight || 
+                 windowObject.elementRect.left !== element.getBoundingClientRect().left || 
+                 windowObject.elementRect.top !== element.getBoundingClientRect().top ) {
+
+                addWindow();
+
+            }
+
+        };
+
         //---
 
         function drawCircle( x, y, radius, color ) {
@@ -522,8 +553,8 @@ THE SOFTWARE.
 
         function mouseLeaveHandler( event ) {
 
-            mousePos.x = 10000;//canvas.width / 2;
-            mousePos.y = 10000;//canvas.height / 2;
+            mousePos.x = -10000;
+            mousePos.y = -10000;
 
         };
 
@@ -539,8 +570,7 @@ THE SOFTWARE.
 
         //---
 
-        addWindow();
-        animloop();
+        init();
 
     };
 

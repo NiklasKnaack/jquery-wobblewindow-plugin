@@ -23,6 +23,7 @@ Wobble Window is a fancy jQuery plugin that helps you create a cool, interactive
 * <http://nkunited.de/jquery/plugins/wobblewindow/example4.html>
 * <http://nkunited.de/jquery/plugins/wobblewindow/example5.html>
 * <http://nkunited.de/jquery/plugins/wobblewindow/example6.html>
+* <http://nkunited.de/jquery/plugins/wobblewindow/example7.html>
 
 ## Installation
 
@@ -67,7 +68,7 @@ With parameters:
 ```js
 var settings = {
 
-    name: 'window_1',//name
+    name: 'my_window',//name
     depth: 1,//depth for zIndex
     offsetX: 0,//+ or - value the size of the div
     offsetY: 0,//+ or - value the size of the div
@@ -77,15 +78,17 @@ var settings = {
     wobbleSpeed: 0.1,//control the wobble speed
     moveSpeed: 3,//control the move speed
     lineWidth: 1,//lineWidth
-    lineColor: '',//no value = no line or hex values
-    bodyColor: '#FFF',//no value = no body color or hex values
+    lineColor: '',//no value = no line. Use hex/rgba values
+    bodyColor: '#FFF',//no value = no body color. Use hex/rgba values
     numberOfXPoints: 7,//quantity of points horizontal. must be an odd int
     numberOfYPoints: 5,//quantity of points vertical. must be an odd int
-    movementLeft: true,//if true the points at the left can be moved
-    movementRight: true,//if true the points at the right can be moved
-    movementTop: true,//if true the points at the top can be moved
-    movementBottom: true,//if true the points at the bottom can be moved
-    debug: false//if true debug mode is on
+    movementLeft: true,//enable/disable movement directions
+    movementRight: true,//enable/disable movement directions
+    movementTop: true,//enable/disable movement directions
+    movementBottom: true,//enable/disable movement directions
+    autoResize: true,//if true size will be automatically adjusted
+    autoResize: true,//enable/disable automatic size adjustement
+    debug: false//enable/disable debug mode
 
 };
 ```

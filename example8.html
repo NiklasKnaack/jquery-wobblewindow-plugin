@@ -4,7 +4,7 @@
 <head>
 
     <meta charset='utf-8'>
-    <title>Wobble Window - jQuery Example 7</title>
+    <title>Wobble Window - jQuery Example 8</title>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
     <script src='js/jquery.wobblewindow.min.js'></script>
 
@@ -33,22 +33,16 @@
             overflow: hidden;
             background-color: #CCC;
         }
-        
-        .clear {
-            clear: both;
-            height: 0;
-            font-size: 0;
-            line-height: 0;
-        }
 
         #window {
-            width:350px; 
-            height:350px; 
-            left:65px; 
-            top:65px; 
-            position:absolute;
+            width: 50%;
+            height: 50%;
+            margin: auto;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
             padding: 50px 50px 50px 50px;
             pointer-events: none;
+            box-sizing: border-box;
         }
 
     </style>
