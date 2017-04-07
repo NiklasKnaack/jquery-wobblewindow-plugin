@@ -9,6 +9,10 @@ Wobble Window is a fancy jQuery plugin that helps you create a cool, interactive
 
 <http://blog.niklasknaack.de/2017/04/wobble-window-jquery-plugin.html>
 
+### JSFiddle
+
+<script async src="//jsfiddle.net/NiklasKnaack/u0ozajc5/embed/"></script>
+
 ### More Examples
 
 * <http://nkunited.de/jquery/plugins/wobblewindow/example1.html>
@@ -31,12 +35,8 @@ npm i jquery-wobblewindow-plugin
 ### HTML
 
 ```html
-<div id='holder' style='width:480px; height:480px; position:absolute; background-color: #562A72'>
-
-    <div id='window'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac elementum tortor, eget efficitur quam. Quisque eu erat dui. Etiam ut mauris at dui feugiat eleifend id vel arcu. Praesent commodo orci quis scelerisque congue. Cras ac mauris quam. Nunc ipsum tortor, lobortis et arcu et, imperdiet maximus massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut aliquam pretium augue.
-    </div>
-
+<div id='window'>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac elementum tortor, eget efficitur quam. Quisque eu erat dui. Etiam ut mauris at dui feugiat eleifend id vel arcu. Praesent commodo orci quis scelerisque congue. Cras ac mauris quam. Nunc ipsum tortor, lobortis et arcu et, imperdiet maximus massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut aliquam pretium augue.
 </div>
 ```
 ### CSS
@@ -50,6 +50,7 @@ npm i jquery-wobblewindow-plugin
     position:absolute;
     padding: 50px 50px 50px 50px;
     pointer-events: none;
+    box-sizing: border-box;
 }
 ```
 
